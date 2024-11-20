@@ -36,7 +36,7 @@ public class BarangayDocs {
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Invalid input. Please enter an integer.");
-                sc.next(); // Clear the invalid input
+                sc.next();
             }
         }                
 

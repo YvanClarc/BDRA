@@ -27,7 +27,6 @@ public class Citizen {
         int action = -1;
         boolean validAction = false;
 
-        // Validate action input
         while (!validAction) {
             try {
                 action = sc.nextInt();
@@ -38,13 +37,12 @@ public class Citizen {
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Invalid input. Please enter an integer.");
-                sc.next(); // Clear the invalid input
+                sc.next();
             }
         }
 
         Citizen hehe = new Citizen();
 
-        // Execute the chosen action
         switch(action) {
             case 1:
                 hehe.addCitizen();
@@ -66,12 +64,11 @@ public class Citizen {
                 break;
         }
 
-        // Validate continuation response
         while (true) {
             System.out.println("Do you want to continue with Citizen management? (Y/N): ");
             response = sc.next();
             if (response.equalsIgnoreCase("y") || response.equalsIgnoreCase("n")) {
-                break; // Valid input, exit the loop
+                break;
             } else {
                 System.out.println("Invalid response. Please enter 'Y' or 'N'.");
             }
